@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+           
+        }
+        .colorfff {
+            background-color: #808080;
+        }
+        .hover :hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body class="wufoo">
+    <div class="hover">
+        <h1>
+            Market Research Survey
+        </h1>
+        <span>
+            Please take a few moments to complete this satisfaction survey.
+        </span>
+    </div>
+    <div class="hover">
+        <div>
+            <p>
+                What is your age range?
+            </p>
+            <select>
+                <option value="18-24">18-24</option>
+                <option value="15-34">15-34</option>
+                <option value="35-50">35-50</option>
+                <option value="+50">+50</option>
+            </select>
+        </div>
+        <div class="hover">
+            <p>
+                What is your yearly income range?
+            </p>
+            <select name="" id="">
+                <option value="">$0 - $25,000</option>
+                <option value="">$25,000 - $50,000</option>
+                <option value="">$50,000 - $100,000</option>
+                <option value="">+ %100,000</option>
+            </select>
+        </div>
+        <div class="hover">
+            <p>
+                Gender Identity
+            </p>
+            <input name="gender" type="radio"> Male <br>
+            <input name="gender" type="radio"> Female<br>
+            <input name="gender" type="radio"> Nonbinary<br>
+            <input name="gender" type="radio"> Other <br>
+            <input type="text">
+            <p>Maximum of 250 characters.    Currently Used: 0 characters.</p>
+
+        </div>
+        <div class="hover">
+            <p>
+                Which of the following products have your purchased in the last 2 months. Please check all that apply.
+            </p>
+            <input type="checkbox"> Product1 <br>
+            <input type="checkbox"> Product2 <br>
+            <input type="checkbox"> Product3 
+        </div>
+        <div class="hover">
+            <p>
+                How often would you use our new product?
+            </p>
+            <input name="often" type="radio"> Daily <br>
+            <input name="often" type="radio"> Weekly <br>
+            <input name="often" type="radio"> Monthly 
+        </div>
+        <div class="hover">
+            <p>
+                What would you pay for the new product?
+            </p>
+            $ <input type="test">.
+              <input type="test">
+        </div>
+        <div class="hover">
+            <p>
+                What features would you like to see in the new product.
+            </p>
+            <textarea name="" id="" cols="200" rows="10">
+
+            </textarea>
+        </div>
+        <div>
+            <p>
+                Please rate your level of agreement with the following statements.
+            </p>
+            <form action="SurveyForm.html">
+                <table border="1" width="100%">
+                    <tr>
+                        <th class="colorfff">
+
+                        </th>
+                        <th class="colorfff">
+                            Strongly Disagree
+                        </th>
+                        <th class="colorfff">
+                            Disagree
+                        </th>
+                        <th class="colorfff">
+                            Agree
+                        </th>
+                        <th class="colorfff">
+                            Strongly Agree
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Our products are priced fairly.
+                        </td>
+                        <td align="center"><input name="fairly" type="radio">1</td> 
+                        
+                        <td align="center"><input name="fairly" type="radio">2</td> 
+                        <td align="center"><input name="fairly" type="radio">3</td> 
+                        <td align="center"><input name="fairly" type="radio">4</td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            Our products are high quality.
+                        </td>
+                        <td align="center"><input name="quality" type="radio">1</td> 
+                        
+                        <td align="center"><input name="quality" type="radio">2</td> 
+                        <td align="center"><input name="quality" type="radio">3</td> 
+                        <td align="center"><input name="quality" type="radio">4</td> 
+                    </tr>
+                    <tr>
+                        <td>
+                            You would recommend our product to a friend or coworker.
+                        </td>
+                         <td align="center"><input name="quality" type="radio">1</td> 
+                        
+                        <td align="center"><input name="quality" type="radio">2</td> 
+                        <td align="center"><input name="quality" type="radio">3</td> 
+                        <td align="center"><input name="quality" type="radio">4</td> 
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <input type="submit" value="submit">
+    </div>
+</body>
+</html>
