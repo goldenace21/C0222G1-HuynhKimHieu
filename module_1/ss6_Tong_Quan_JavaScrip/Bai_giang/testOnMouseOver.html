@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p onclick="do_something()">
+        click me
+    </p>
+    <p id="nemo">
+        click
+    </p>
+    <p onmouseover="mouseover()" onmouseout="mouseout()" id="demo">
+        this is text
+    </p>
+    <script>
+        function mouseover() {
+            document.getElementById("demo").style.color="red";
+        }
+
+        function mouseout() {
+            document.getElementById("demo").style.color="black";
+        }
+
+        function do_something() {
+            alert("hello world")
+        }
+
+        var nemo = document.getElementById("nemo");
+        nemo.addEventListener("click",clickFunction);
+        function clickFunction() {
+            alert("xin chào")
+        }
+
+    </script>
+</body>
+</html>
