@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Calculator
+    </h1>
+    <div class="input">
+        <input type="text" id="dauvao1">
+        <input type="text" id="dauvao2">
+    </div>
+    <div>
+        <button onclick="ad('+')">Adidition(+)</button>
+        <button onclick="ad('-')">Subtraction(-)</button>
+        <button onclick="ad('*')">Multiplication(x)</button>
+        <button onclick="ad('/')">division(÷)</button>
+    </div>
+    <div id="showmessage"></div>
+    <script>
+        function ad(value) {
+            let giaTri1 = parseInt(document.getElementById('dauvao1').value);
+            let giaTri2 = parseInt(document.getElementById('dauvao2').value);
+
+            let tong = eval(giaTri1 +value+ giaTri2);
+            document.getElementById('showmessage').innerText = tong;
+
+        }
+    </script>
+</body>
+</html>
