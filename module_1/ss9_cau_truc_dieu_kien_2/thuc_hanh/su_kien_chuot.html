@@ -15,9 +15,10 @@
 <body>
     <form>
         <img id="myImage" width="200" height=auto
-            src="https://www.pngall.com/wp-content/uploads/5/Sports-Ball-Transparent.png" />
+            src="https://cdn131.picsart.com/328254786060211.png" />
         <p>Click button below to move the image to right</p>
-        <input type="button" value="Click Me" />
+
+        <input type="button" value="Click Me" onclick="moveRight();" />
     </form>
     <script>
         let imgObj = null;
@@ -27,6 +28,11 @@
             imgObj.style.position = 'relative';
             imgObj.style.left = '0px';
         }
+        function moveRight() {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+        }
+        window.onload = init;
+
     </script>
 </body>
 
