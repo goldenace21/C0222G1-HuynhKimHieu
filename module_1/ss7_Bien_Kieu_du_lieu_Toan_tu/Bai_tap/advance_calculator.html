@@ -8,12 +8,15 @@
     <title>Document</title>
     <style>
         .container {
-            width: 50%;
+            width: 100%;
+            height: 100%;
         }
+
 
         button {
             width: 100%;
         }
+
     </style>
 </head>
 
@@ -27,90 +30,92 @@
             </tr>
             <tr>
                 <td>
-                    <button onclick="cong">(</button>
+                    <button onclick="cong('(')">(</button>
                 </td>
                 <td>
-                    <button onclick="cong">)</button>
+                    <button onclick="cong(')')">)</button>
                 </td>
                 <td>
-                    <button onclick="cong">%</button>
+                    <button onclick="cong('%')">%</button>
                 </td>
                 <td>
-                    <button>AC</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button onclick="cong">7</button>
-                </td>
-                <td>
-                    <button onclick="cong">8</button>
-
-                </td>
-                <td>
-                    <button onclick="cong">9</button>
-
-                </td>
-                <td>
-                    <button onclick="cong">÷</button>
-
+                    <button onclick="reset('')">AC</button>
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="cong">4</button>
+                    <button onclick="cong('7')">7</button>
                 </td>
                 <td>
-                    <button onclick="cong">5</button>
+                    <button onclick="cong('8')">8</button>
 
                 </td>
                 <td>
-                    <button onclick="cong">6</button>
+                    <button onclick="cong('9')">9</button>
 
                 </td>
                 <td>
-                    <button onclick="cong">x</button>
+                    <button onclick="cong('/')">÷</button>
 
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="cong">1</button>
+                    <button onclick="cong('4')">4</button>
                 </td>
                 <td>
-                    <button onclick="cong">2</button>
+                    <button onclick="cong('5')">5</button>
 
                 </td>
                 <td>
-                    <button onclick="cong">3</button>
+                    <button onclick="cong('6')">6</button>
 
                 </td>
                 <td>
-                    <button onclick="cong">-</button>
+                    <button onclick="cong('7')">x</button>
 
                 </td>
             </tr>
             <tr>
                 <td>
-                    <button onclick="cong">0</button>
+                    <button onclick="cong('1')">1</button>
                 </td>
                 <td>
-                    <button onclick="cong">.</button>
+                    <button onclick="cong('2')">2</button>
 
                 </td>
                 <td>
-                    <button>=</button>
+                    <button onclick="cong('3')">3</button>
 
                 </td>
                 <td>
-                    <button onclick="cong">+</button>
+                    <button onclick="cong('-')">-</button>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="cong('0')">0</button>
+                </td>
+                <td>
+                    <button onclick="cong('.')">.</button>
+
+                </td>
+                <td>
+                    <button onclick="bang('')">=</button>
+
+                </td>
+                <td>
+                    <button onclick="cong('+')">+</button>
 
                 </td>
             </tr>
         </table>
     </div>
     <script>
-        document.getElementById('')
+        function cong(){
+
+        }
     </script>
 </body>
 
