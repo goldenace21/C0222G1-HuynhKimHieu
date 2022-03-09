@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="soA" placeholder="nhap so a" type="text"><br>
+    <input id="soB" placeholder="nhap so b" type="text"><br>
+    <input id="soC" placeholder="nhap so c" type="text"><br>
+    <button onclick="tim()"> so lon nhat la </button><br>
+    <p id="demo"></p>
+
+    <script>
+        function tim() {
+            let a = parseInt(document.getElementById('soA').value);
+            let b = parseInt(document.getElementById('soB').value);
+            let c = parseInt(document.getElementById('soC').value);
+
+
+            if (a > b && a > c) {
+                document.getElementById('demo').innerHTML = "so " + a + " la so lon nhat"
+            } else if (b > a && b > c) {
+                document.getElementById('demo').innerHTML = "so " + b + " la so lon nhat"
+
+            } else {
+                document.getElementById('demo').innerHTML = "so " + c + " la so lon nhat"
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

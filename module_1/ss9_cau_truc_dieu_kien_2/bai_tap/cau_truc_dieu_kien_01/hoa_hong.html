@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <!-- 5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+        10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+        20 % nếu tổng doanh số là lớn hơn 300 triệu. -->
+        <script>
+            
+            let doanhSo = parseInt(prompt('nhap doanh so ban hang'));
+            let hoaHong = 0;
+
+            if (doanhSo <= 100000000) {
+                alert(hoaHong=(doanhSo/100)*5 +' '+ 'vnd là hoa hong cua ban')
+            } else if (doanhSo <= 300000000) {
+                alert(hoaHong=(doanhSo/100)*10 +' '+ 'vnd là hoa hong cua ban')
+
+            }else {
+                alert(hoaHong=(doanhSo/100)*20 +' '+ 'vnd là hoa hong cua ban')
+
+            }
+        </script>
+</body>
+</html>

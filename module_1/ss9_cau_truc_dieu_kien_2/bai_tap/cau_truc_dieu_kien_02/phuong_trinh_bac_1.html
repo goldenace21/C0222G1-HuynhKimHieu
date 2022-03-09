@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>GIẢI PHƯƠNG TRÌNH BẬT 1</p>
+    <span>Nhập các tham số của phương trình ax + b = 0</span><br>
+    <input id="soA" placeholder="nhap so a" type="text"><br>
+    <input id="soB" placeholder="nhap so b" type="text"><br>
+    <button onclick="ketQua();">ket qua</button>
+    <p id="demo"></p>
+    <script>
+        function ketQua() {
+            let a = parseInt(document.getElementById('soA').value);
+            let b = parseInt(document.getElementById('soB').value);
+
+            if (a == 0) {
+                document.getElementById('demo').innerHTML = 'phuong trinh vo nghiem';
+            } else if (b == 0) {
+                document.getElementById('demo').innerHTML = 'phuong trinh vo nghiem';
+            } else {
+                document.getElementById('demo').innerHTML = 'phuong trinh co nghiem la ' +  -b / a;
+
+            }
+        }
+    </script>
+</body>
+
+</html>

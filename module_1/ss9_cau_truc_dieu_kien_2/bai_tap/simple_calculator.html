@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            background-color: #808080;
+            margin: auto;
+            padding: 2px;
+        }
+
+        #result {
+            width: 176px;
+            height: 50px;
+            font-size: 40px;
+            text-align: right;
+        }
+
+        .btn {
+            width: 42px;
+            height: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <input id="result" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="cong('(')">(</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong(')')">)</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('%')">%</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="reset()">AC</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="cong('7')">7</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('8')">8</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('9')">9</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('/')">÷</button>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="cong('4')">4</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('5')">5</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('6')">6</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('*')">x</button>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="cong('1')">1</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('2')">2</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('3')">3</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('-')">-</button>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button class="btn" onclick="cong('0')">0</button>
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('.')">.</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="total()">=</button>
+
+                </td>
+                <td>
+                    <button class="btn" onclick="cong('+')">+</button>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        function cong(value) {
+            document.getElementById('result').value += value;
+        }
+        function total() {
+            let number1 = document.getElementById('result').value;
+            let number2 = eval(number1);
+            document.getElementById('result').value = number2;
+
+        }
+        function reset() {
+        document.getElementById('result').value = "";
+
+    }
+
+    </script>
+</body>
+
+</html>
