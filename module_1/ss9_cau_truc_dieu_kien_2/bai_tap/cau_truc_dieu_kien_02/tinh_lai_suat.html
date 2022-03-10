@@ -12,9 +12,10 @@
     <script>
         let sotien = parseInt(prompt('nhap so tien cho vay'));
         let sothang = parseInt(prompt('nhap so thang cho vay'));
-        let laisuat = parseInt(prompt('nhap lai suat ngan hang'));
+        let laisuat = 6/100;
 
-        let tienlai = 
+        let tienlai = sotien * Math.pow((1+laisuat), sothang) - sotien;
+        alert('so tien lai sau '+ sothang + ' ' + 'thang la: ' + tienlai +'vnd');
         
     </script>
 </body>
