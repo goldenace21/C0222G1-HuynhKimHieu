@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <h1>Game doan so</h1>
+
+    <button onclick="start()">start</button>
+
+    <script>
+        function start() {
+            let a = parseInt(prompt('nhap so a'))
+            let b = parseInt(prompt('nhap so b'))
+            let num = 0
+
+
+            var random = Math.floor(Math.random() * (b - a)) + a;
+            console.log(random)
+            let c = parseInt(prompt('doan so trong khoang vua nhap'))
+            while(num<3){
+                if(c>random && c<=b){
+                    alert("số bạn nhập quá lớn")
+                    num++
+                     c = parseInt(prompt('doan so trong khoang vua nhap tu' + a + 'den' +b))
+                } else if (c<random && c>=a) {
+                    alert("số bạn nhập quá nhỏ")
+                    num++
+                     c = parseInt(prompt('doan so trong khoang vua nhap'))
+
+                } else if (c==random) {
+                    alert("chúc mừng")
+                    break;
+                } else {
+                    alert("nhập sai, nhập lại trong khoảng" + a + 'đến' +b)
+                    num++
+                    c = parseInt(prompt('doan so trong khoang vua nhap'))
+                    
+                }
+                
+                }
+            
+        }
+
+    </script>
+</body>
+
+</html>
