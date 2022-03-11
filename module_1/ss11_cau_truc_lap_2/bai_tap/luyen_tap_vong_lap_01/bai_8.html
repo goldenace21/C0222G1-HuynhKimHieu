@@ -20,34 +20,34 @@
         function start() {
             let a = parseInt(prompt('nhap so a'))
             let b = parseInt(prompt('nhap so b'))
-            let num = 0
+            let num = 1
 
 
             var random = Math.floor(Math.random() * (b - a)) + a;
             console.log(random)
-            let c = parseInt(prompt('doan so trong khoang vua nhap'))
-            while(num<3){
-                if(c>random && c<=b){
-                    alert("số bạn nhập quá lớn")
+            let c = parseInt(prompt('doan so trong khoang ' + a + 'đến ' + b))
+            while (num < 3) {
+                if (c > random && c <= b) {
+                    alert("so ban nhap qua lon, hay nhap lai")
                     num++
-                     c = parseInt(prompt('doan so trong khoang vua nhap tu' + a + 'den' +b))
-                } else if (c<random && c>=a) {
-                    alert("số bạn nhập quá nhỏ")
-                    num++
-                     c = parseInt(prompt('doan so trong khoang vua nhap'))
-
-                } else if (c==random) {
-                    alert("chúc mừng")
-                    break;
-                } else {
-                    alert("nhập sai, nhập lại trong khoảng" + a + 'đến' +b)
+                    c = parseInt(prompt('doan so trong khoang vua nhap tu ' + a + ' ' + 'den ' + b))
+                } else if (c < random && c >= a) {
+                    alert("so ban nhap qua nho, hay nhap lai")
                     num++
                     c = parseInt(prompt('doan so trong khoang vua nhap'))
-                    
+
+                } else if (c == random) {
+                    alert("chuc mung")
+                    break;
+                } else {
+                    alert('nhap sai, nhap lai trong khoang ' + a + ' ' + 'đến ' + b)
+                    num++
+                    c = parseInt(prompt('doan so trong khoang vua nhap tu ' + a + ' ' + 'den ' + b))
+
                 }
-                
-                }
-            
+
+            }
+
         }
 
     </script>
