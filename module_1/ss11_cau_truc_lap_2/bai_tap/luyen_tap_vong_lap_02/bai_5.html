@@ -10,14 +10,13 @@
 
 <body>
     <script>
-        let a = parseInt(prompt('nhâp số muốn tìm giai thừa'))
+        let a = parseInt(prompt('nhap so tien cho vay'));
+        let b = parseInt(prompt('nhap so thang cho vay'));
+        let c = 6/100;
 
-
-        for (let i = 1, c; i <= a; i++) {
-            c = a * --a 
-
-        }
-        document.write(c)
+        let d = a * Math.pow((1+c), b) - a;
+        alert('so tien lai sau '+ b + ' ' + 'thang la: ' + d +'vnd');
+        
     </script>
 </body>
 

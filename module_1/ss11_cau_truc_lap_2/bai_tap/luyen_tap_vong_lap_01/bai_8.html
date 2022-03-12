@@ -18,26 +18,26 @@
 
     <script>
         function start() {
-            let a = parseInt(prompt('nhap so a'))
-            let b = parseInt(prompt('nhap so b'))
+            let a = parseInt(prompt('nhap so thu nhat'))
+            let b = parseInt(prompt('nhap so thu hai'))
             let num = 1
 
 
-            var random = Math.floor(Math.random() * (b - a)) + a;
+            let random = Math.floor(Math.random() * (b - a)) + a;
             console.log(random)
-            let c = parseInt(prompt('doan so trong khoang ' + a + 'đến ' + b))
+            let c = parseInt(prompt('doan so trong khoang ' + a + ' ' + 'đến ' + b))
             while (num < 3) {
                 if (c > random && c <= b) {
-                    alert("so ban nhap qua lon, hay nhap lai")
+                    alert("so ban nhap qua lon, hay nhap so be hon")
                     num++
                     c = parseInt(prompt('doan so trong khoang vua nhap tu ' + a + ' ' + 'den ' + b))
                 } else if (c < random && c >= a) {
-                    alert("so ban nhap qua nho, hay nhap lai")
+                    alert("so ban nhap qua nho, hay nhap so lon hon")
                     num++
-                    c = parseInt(prompt('doan so trong khoang vua nhap'))
+                    c = parseInt(prompt('doan so trong khoang vua nhap tu ' + a + ' ' + 'den ' + b))
 
                 } else if (c == random) {
-                    alert("chuc mung")
+                    alert("chuc mung, ban da doan dung")
                     break;
                 } else {
                     alert('nhap sai, nhap lai trong khoang ' + a + ' ' + 'đến ' + b)
@@ -46,6 +46,11 @@
 
                 }
 
+            }
+            if (c != random) {
+             alert('nhap sai qua 3 lan, an start de choi lai')
+            } else {
+                alert("chuc mung, ban da doan dung")
             }
 
         }
