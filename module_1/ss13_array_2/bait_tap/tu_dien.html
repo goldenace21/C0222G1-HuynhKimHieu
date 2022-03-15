@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input placeholder="search" id="value" type="text">
+    <button onclick="dich()">translate</button>
+
+    <script>
+        let english = ['dog', 'cat', 'rat', 'bird']
+        let vietnam = ['chó', 'mèo', 'chuột', 'chim']
+        
+        function dich() {
+            let search = document.getElementById('value').value
+            let newsearch = search.toLowerCase();
+            if (english.indexOf(newsearch)!== -1) {
+                alert(vietnam[english.indexOf(newsearch)])
+            }else{
+                alert("không có trong từ điển")
+            }
+        }
+    </script>
+</body>
+
+</html>
