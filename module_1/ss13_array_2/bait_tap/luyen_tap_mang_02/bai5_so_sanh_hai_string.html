@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
         // Bài 5: Viết một chương trình nhập vào 2 chuỗi, sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
@@ -13,16 +15,17 @@
         let b = prompt('nhap chuoi b')
         let arrayA = a.split("");
         let arrayB = b.split("");
-        for (let i =0;i<arrayA.length;i++){
-                if(arrayA[i] === arrayB[i]){
-                    alert('a = b')
-                    break
-                }else{
-                    alert('a != b')
-                    break
+        for (let i = 0; i < arrayA.length; i++) {
+            if (arrayA[i] === arrayB[i]) {
+                alert('a = b')
+                break
+            } else {
+                alert('a != b')
+                break
 
-                }
+            }
         }
     </script>
 </body>
+
 </html>
