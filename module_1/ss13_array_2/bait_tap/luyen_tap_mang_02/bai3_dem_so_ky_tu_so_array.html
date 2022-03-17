@@ -9,12 +9,13 @@
 </head>
 
 <body>
-    <!-- Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. Chương trình này đếm số ký tự số trong mảng.  -->
+    <!-- Bài 3: Viết một chương trình khai báo một mảng ký tự và kích thước của mảng. 
+        Chương trình này đếm số ký tự số trong mảng.  -->
     <script>
         let arr = ['q', 'w', 'e', '1', '2', '3'],
             count = 0
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i] > 0 || arr[i] <= 0) {
+            if (parseInt(arr[i]) > 0 || parseInt(arr[i]) <= 0) {
                 count++
             }
         }

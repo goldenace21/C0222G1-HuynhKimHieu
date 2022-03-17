@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      // function showDialog() {
+      //     alert('hello')
+      // }
+      // showDialog()
+
+      // function writeLog(message) {
+      //     console.log(message)
+      // }
+      // writeLog('Test message')
+
+      // function func1(a) {
+      //     if (a == 2)
+      //         return 2;
+      //     return a * func1(a - 1);
+      // }
+      // console.log(func1(5))
+
+      // function swap(a, b) {
+      //     var temp = a;
+      //     a = b;
+      //     b = temp;
+      // }
+
+      // var a = 5;
+      // var b = 10;
+      // swap(a, b);
+      // document.write("a = " + a + ", b = " + b);
+      
+
+      /*Tạo hàm đếm số lần xuất hiện của một phần tử trong mảng JavaScript*/
+      function count_element_in_array(array, x) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] == x)
+            //Tìm thấy phần tử giống x trong mảng thì cộng biến đếm
+            count++;
+        }
+        console.log("Phan tu " + x + " xuat hien " + count + " lan");
+      }
+
+      let array = [7, 2, 6, 7, 4, 9, 8];
+       
+
+      count_element_in_array(array, 7);
+      count_element_in_array(array, 4);
+    </script>
+  </body>
+</html>

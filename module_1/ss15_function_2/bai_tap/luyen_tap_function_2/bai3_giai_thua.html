@@ -1,29 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
 <body>
-    <!-- Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi -->
     <script>
-        let str = "-2 -1 -2 -3 4 5 6"
-
-        let abc = str.split(" ")
-        count = 0
-        for (let i = 0; i < abc.length; i++) {
-            if (abc[i] < 0) {
-                count++
+        function giaiThua() {
+            let a = parseInt(prompt('nhap so a'))
+            let c=1
+            for (let i = 1;i <= a;i++) {
+                 c = c * i;
             }
+            alert(c)
         }
-        alert(count)
-
-
+        giaiThua()
     </script>
 </body>
-
 </html>

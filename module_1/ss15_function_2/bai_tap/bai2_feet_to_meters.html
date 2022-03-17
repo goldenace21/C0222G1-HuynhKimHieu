@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Feet To Meter</h1>
+    <p>
+      <label>input feet: </label>
+      <input type="number" placeholder="feet" oninput="feetToMeter(this.value)"/>
+    </p>
+    <p>meters: <span id="meter"></span></p>
+
+    <h1>Meter To feet</h1>
+    <p>
+      <label>input meters: </label>
+      <input type="number" placeholder="meters" oninput="meterToFeet(this.value)" />
+    </p>
+    <p>feet: <span id="feet"></span></p>
+
+    <script>
+      function feetToMeter(f) {
+        document.getElementById("meter").innerHTML = 0.305 * f;
+      }
+
+      function meterToFeet(m) {
+        document.getElementById("feet").innerHTML = 3.279 * m;
+      }
+    </script>
+  </body>
+</html>
