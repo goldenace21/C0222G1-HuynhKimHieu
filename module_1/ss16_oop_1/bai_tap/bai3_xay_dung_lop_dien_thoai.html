@@ -7,43 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- bài này e chưa làm được -->
     <script>
-        class mobile {
-            constructor(status,batteryCapacity, typingMessage, inboxMessage, sentMessage) {
+        class nokia {
+            constructor(status, batteryCapacity, typingMessage, inboxMessage, sentMessage) {
                 this.status = status;
                 this.batteryCapacity = batteryCapacity;
                 this.typingMessage = typingMessage;
                 this.inboxMessage = inboxMessage;
                 this.sentMessage = sentMessage;
             }
-            
+
             getStatus() {
                 return this.status;
             }
 
-            turnOn() {
-
-            }
-
-            turnOff() {
-
+            turnOnTurnOff() {
+                if (this.status == false) {
+                    return true;
+                } else if (this.status == true) {
+                    return false
+                }
             }
 
             Charge() {
-
+                if (this.batteryCapacity < 100) {
+                    this.batteryCapacity = 100
+                    console.log('dang xac pin')
+                } else {
+                    console.log('pin day')
+                }
             }
 
-            TypeMessage() {
-
+            TypeMessage(message) {
+                console.log(message)
             }
 
             ReceiveMessage() {
-
+                return this.inboxMessage;
             }
 
-            sendMessage() {
+            sendMessage(iphoneObj, message) {
+                iphoneObj.inboxMessage.push(message);
+                this.sentMessage.push(message);
+                return 'da goi tin nhan';
 
             }
 
@@ -56,10 +65,68 @@
             }
 
         }
+        class iphone {
+            constructor(status, batteryCapacity, inboxMessage, sentMessage) {
+                this.status = status;
+                this.batteryCapacity = batteryCapacity;
+                this.inboxMessage = inboxMessage;
+                this.sentMessage = sentMessage;
+            }
 
-        let nokia = new mobile()
-        let iphone = new mobile()
+            getStatus() {
+                return this.status;
+            }
+
+            turnOnTurnOff() {
+                if (this.status == false) {
+                    return true;
+                } else if (this.status == true) {
+                    return false
+                }
+            }
+
+            Charge() {
+                if (this.batteryCapacity < 100) {
+                    this.batteryCapacity = 100
+                    console.log('dang xac pin')
+                } else {
+                    console.log('pin day')
+                }
+            }
+
+            TypeMessage(message) {
+                console.log(message)
+            }
+
+            ReceiveMessage() {
+return this.inboxMessage;
+            }
+
+            sendMessage(nokiaObj, message) {
+                nokiaObj.inboxMessage.push(message);
+                this.sentMessage.push(message);
+                return 'da goi tin nhan';
+
+            }
+
+            viewMessageFromInbox() {
+
+            }
+
+            viewSendMessage() {
+
+            }
+
+        }
+        let ibIphone = [];
+        let sentIp = [];
+        let ibNokia = [];
+        let sentNokia = [];
+
+        let Nokia = new nokia(true,60,ibNokia,sentNokia)
+        let Iphone = new iphone(true,50,ibIphone,sentIp)
+        console.log(Iphone.sendMessage(Nokia,"alo"))
+        console.log(Nokia.ReceiveMessage())
     </script>
 </body>
-
 </html>

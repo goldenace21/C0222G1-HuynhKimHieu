@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple {
+            constructor(weight) {
+                this.weight = weight;
+            }
+        }
+
+        class Human {
+            constructor(name, gender, weight) {
+                this.name = name;
+                this.gender = gender;
+                this.weight = weight;
+            }
+
+            isMale() {
+                if (this.gender===true) {
+                    console.log('male');
+                } else {
+                    console.log('female');
+                }
+            }
+          
+            checkApple(AppleObj) {
+                return AppleObj.weight;
+            }
+            eat(AppleObj,message) {
+                if(AppleObj.weight>0) {
+                    --AppleObj;
+                    ++this.weight;
+                    this.say(message);
+                    return this.weight;
+                } else {
+                    return 'hết táo';
+                }
+              
+            } 
+            
+            say(message) {
+                console.log (`${this.name} say ${message}`);
+            }
+        }
+        let apple = new Apple(10);
+        let adam = new Human('adam',true,70);
+        console.log(adam.eat(apple,"awn no roi"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Remote {
+            constructor(objTv) {
+                this.objTv = objTv;
+            }
+            changeChanel(chanel) {
+                if (this.objTv.status) {
+                    this.objTv.chanel = chanel;
+                    return `da doi kenh ${this.objTv.chanel}`;
+                } else {
+                    return 'tv da tat'
+                }
+            }
+            changeVolume(volume) {
+                if(this.objTv.status) {
+                    this.objTv.volume = volume;
+                return `am luong la ${this.objTv.volume}`;
+                } else {
+                    return 'tv da tat'
+                }
+                
+            }
+            turnOnTv() {
+                this.objTv.status = true;
+                return `tv da bat`
+            }
+            turnOffTv() {
+                this.objTv.status = false;
+                return `tv da tat`
+            }
+
+            chanel() {
+                return  this.objTv.chanel;
+            }
+
+            volume() {
+                return  this.objTv.volume;
+            }
+            
+        }
+        class Television {
+            constructor(chanel, volume, status) {
+                this.chanel = chanel;
+                this.volume = volume;
+                this.status = status;
+            }
+            changeChanel(chanel) {
+                if(this.chanel) {
+
+                    this.chanel = chanel;
+                    return this.chanel;
+                } else {
+                    return 'tv da tat'
+
+                }
+            }
+            volume(volume) {
+                if (this.volume) {
+                    this.volume = volume;
+                    return this.volume;
+                } else {
+                    return 'tv da tat'
+                }
+
+            }
+
+        }
+
+        let tvSamsung = new Television(1,15,true);
+        let remoteSamsung = new Remote(tvSamsung);
+
+        console.log(remoteSamsung.changeVolume(100))
+        console.log(remoteSamsung.volume())
+        console.log(remoteSamsung.turnOffTv())
+        console.log(remoteSamsung.changeChanel(7))
+        
+       
+    </script>
+</body>
+</html>

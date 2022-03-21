@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class SwitchButton {
+            constructor(status) {
+                this.status = status;
+            }
+            switchOff(lamp) {
+                this.status = false;
+                lamp.status = false;
+                return this.status;
+            }
+            switchOn(lamp) {
+                this.status = true
+                lamp.status = true;
+                return this.status;
+            }
+            switchButton(lamp) {
+                if (this.status) {
+                    lamp.status = false;
+
+                    return 'den tat'
+                } else {
+                    lamp.status = true;
+
+                    return 'den bat'
+
+                }
+            }
+        }
+
+        class ElectricLamp {
+            constructor(status) {
+                this.status = status;
+            }
+            returnStatus() {
+                return this.status
+            }
+            turnOff() {
+                this.status = false;
+                return 'den tat';
+            }
+            turnOn() {
+                this.status = true;
+                return 'den bat';
+            }
+        }
+
+        let button = new SwitchButton(false);
+        let lamp = new ElectricLamp(false)
+
+        for (let i = 1; i <= 10; i++) {
+            console.log(button.switchOn(lamp))
+            console.log(button.switchOff(lamp))
+            
+        }
+
+    </script>
+</body>
+
+</html>
