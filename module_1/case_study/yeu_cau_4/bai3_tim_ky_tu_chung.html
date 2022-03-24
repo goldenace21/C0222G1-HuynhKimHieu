@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let s1 = "aabcc";
+        let s2 = "adcaa";
+        let ar1 = s1.split('')
+        let ar2 = s2.split('')
+        let arr = []
+        for (let i = 0; i < s1.length; i++) {
+            for (let j = 0; j < s2.length; j++) {
+                if (ar1[i] === ar2[j]) {
+                    arr.push(ar1[i])
+                    ar1.splice(i, 1)
+                }
+            }
+        }
+        alert(arr)
+    </script>
+</body>
+
+</html>

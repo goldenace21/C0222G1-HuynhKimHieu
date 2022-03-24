@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // viet 1 function kiem tra so nguyen > true false;
+        // tao 1 mang 2 chieu - truyen gia trị vao mảng 2 chiều
+        // if function kiem tra so nguyen tra ve la true > count++;
+        //return count;
+        function isPrime(number) {
+            let count = 0;
+
+            for (let i = 1; i <= number; i++) {
+                if (number % i === 0) {
+                    count++;
+                }
+            }
+
+            if (count === 2) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // 1. TAO MANG 2 CHIEU DUOC NHAP TU NGUOI DUNG
+        
+        let arr = [
+        ]
+        let n = parseInt(prompt('nhap so array'));
+        let m = parseInt(prompt('nhap so luong phan tu'));
+
+        for (let i = 0;i<n;i++) {
+            arr.push([])
+            for (let j = 0;j<m;j++) {
+                arr[i].push(parseInt(prompt('nhap phan tu ' + i+' '+j)))
+            }
+        }
+        let count = 0;
+        for(let i =0;i<n;i++) {
+            for (let j = 0;j<m;j++) {
+                if (isPrime(arr[i][j])) {
+                    console.log(arr[i][j])
+                    count++
+                }
+            }
+        }
+        
+        console.log(arr)
+        console.log(count)
+        
+
+    </script>
+</body>
+
+</html>

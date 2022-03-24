@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let salary = parseInt(prompt('input salary'));
+        let income = 0;
+        if (salary < 7000000) {
+            income = salary - (salary / 100) * 5;
+            alert(`income = ${income}vnd tax = ${(salary / 100) * 5}`);
+        } else if (salary > 7000000 && salary < 15000000) {
+            income = salary - (salary / 100) * 10;
+            alert(`income = ${income}vnd tax = ${(salary / 100) * 10}`);
+        } else if (salary >= 15000000) {
+            income = salary - (salary / 100) * 20;
+            alert(`income = ${income}vnd tax = ${(salary / 100) * 20}`);
+        }
+    </script>
+</body>
+</html>

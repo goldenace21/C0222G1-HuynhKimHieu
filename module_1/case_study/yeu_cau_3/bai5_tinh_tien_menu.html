@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let price = [10000, 12000, 15000, 11000, 7000, 14000];
+        do {
+            let drink = parseInt(prompt('MENU' + '\n' + '1 coffee' + '\n' + '2 Orange juice' + '\n' + '3 carrot juice' + '\n' + '4 tomato juice' + '\n' + '5 water' + '\n' + '6 coconut water' + '\n' + '7 exit'));
+            if (drink !=7) {
+                let amount = parseInt(prompt(`price: ${price[drink - 1]}vnd input amount`));
+                let pay = alert(amount * (price[drink - 1]) + 'vnd');
+            } else {
+                break;
+            }
+        } while (true)
+    </script>
+</body>
+</html>

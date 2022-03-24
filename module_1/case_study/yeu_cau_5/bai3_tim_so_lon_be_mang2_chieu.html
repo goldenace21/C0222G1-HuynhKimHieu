@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        function findMinMax() {
+
+            let arr = [];
+            let n = parseInt(prompt('nhap so array'));
+            let m = parseInt(prompt('nhap so luong phan tu'));
+    
+            for (let i = 0; i < n; i++) {
+                arr.push([]);
+                for (let j = 0; j < m; j++) {
+                    arr[i].push(parseInt(prompt('nhap phan tu ' + i + ' ' + j)))
+                }
+            }
+            let max = (arr[0][0]);
+            let min = (arr[0][0]);
+    
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < m; j++) {
+                    if ((arr[i][j]) > max) {
+                        max = (arr[i][j])
+                        
+                    } else if ((arr[i][j]) < min) {
+                        min = (arr[i][j])
+                    }
+                }
+            }
+            console.log('max: ' + max)
+            console.log('min: ' + min)
+        }
+        findMinMax()
+        
+
+
+
+    </script>
+</body>
+
+</html>

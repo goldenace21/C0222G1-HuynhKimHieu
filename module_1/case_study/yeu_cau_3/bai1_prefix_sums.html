@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arrayLength = parseInt(prompt('input array length'));
+        let array = []
+        for (let i = 0; i <arrayLength;i++) {
+            array.push(parseInt(prompt('input number index ' + i))) 
+        }
+        let b=0;
+        let arrayB = []
+        for(let i=0; i<arrayLength;i++){
+            b+=array[i];
+            arrayB.push(b);
+        }
+        alert(arrayB)
+    </script>
+</body>
+</html>
